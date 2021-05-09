@@ -1,0 +1,358 @@
+/* 
+ Variables
+*/
+:root {
+  --clr-primary: #1edb2e;
+  --clr-secondary: #105c17;
+  --clr-text-white: #e0e0e0;
+  --clr-text-black: #1b1b1b;
+  --clr-white: #ffffff;
+  --clr-black: #000000;
+  --clr-header1: #0e0e0e;
+  --clr-header2: #1d1d1d;
+  --clr-header3: #2b2b2b;
+  --clr-header4: #292929;
+  --clr-button: #42ff3b;
+  --clr-link-before: #07e61a;
+  --clr-link-after: #76fa72;
+  --transition-link: all 0.3s linear;
+  --card-transition: all 0.1s linear;
+  --clr-nav: #1f1f1f;
+  --clr-footer: #313131;
+}
+.button {
+  transition: var(--transition-link);
+  background-color: var(--clr-primary);
+  padding: 0.7rem 1rem;
+  color: var(--clr-white);
+  border-radius: 4px;
+}
+.button:hover {
+  background-color: var(--clr-button);
+}
+
+/* Nav-Bar Styling */
+nav {
+  display: flex;
+  flex-direction: column;
+  padding: 0 3rem 0.5rem 3rem;
+  background-color: var(--clr-nav);
+  position: fixed;
+  width: 100%;
+  box-shadow: 0 1.4px 5px #186b17;
+  /* Makes sure that the navbar displays over animations */
+  z-index: 1;
+}
+.nav-name {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100%;
+  margin-top: 0.3rem;
+}
+.nav-header {
+  font-size: 2.3rem;
+  color: var(--clr-text-white);
+}
+.nav-header span {
+  color: var(--clr-primary);
+}
+.nav-toggle {
+  height: 30%;
+  font-size: 2.3rem;
+  border-style: none;
+  background-color: transparent;
+  padding-top: 0.3rem;
+  color: var(--clr-text-white);
+}
+.nav-links {
+  list-style-type: none;
+}
+.nav-link {
+  text-transform: capitalize;
+  color: var(--clr-text-white);
+  font-size: 1.3rem;
+  transition: var(--transition-link);
+  line-height: 3rem;
+}
+.nav-link:hover {
+  color: var(--clr-primary);
+}
+.nav-links {
+  height: 0;
+  overflow: hidden;
+  transition: var(--transition-link);
+}
+.show-links {
+  height: 192px;
+}
+
+/* Hero Styling */
+.hero-container {
+  height: 50vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url("./images/personal-info.jpeg");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.header {
+  color: var(--clr-text-white);
+  font-size: 4.3rem;
+}
+
+/* About Styling */
+.about-header {
+  margin: 0 auto;
+  padding-top: 0.5rem;
+  /* background: red; */
+  width: 70%;
+  border-bottom-style: solid;
+  border-width: 2px;
+  border-color: rgb(233, 233, 233);
+}
+.about-header h3 {
+  margin-top: 2rem;
+}
+.about-article {
+  /* background: red; */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 1.5rem;
+}
+.about-me {
+  width: 70%;
+  margin-bottom: 1rem;
+}
+.border {
+  border-style: solid;
+  width: 20%;
+  border-width: 0.2px;
+  border-color: rgb(233, 233, 233);
+  margin: 1rem 0;
+}
+
+/* Footer Styling */
+footer {
+  height: 20vh;
+  background-color: var(--clr-footer);
+  margin-top: 5rem;
+}
+.final-sect {
+  /* background: red; */
+  width: 50%;
+  height: 100%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.final-sect a {
+  width: 32%;
+  text-align: center;
+}
+.icons {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  /* background: blue; */
+  width: 60%;
+  margin-bottom: 1.5rem;
+}
+.social {
+  font-size: 2.5rem;
+  /* background: red; */
+  color: var(--clr-primary);
+  transition: var(--transition-link);
+}
+.social:hover {
+  color: var(--clr-button);
+}
+.footer-button {
+  min-width: 8rem;
+}
+
+a {
+  color: var(--clr-link-before);
+  transition: var(--transition-link);
+}
+a:hover {
+  color: var(--clr-link-after);
+}
+
+@media screen and (min-width: 913px) and (max-width: 1506px) {
+  /* Navbar Styling Tablet and Laptop */
+  nav {
+    height: 10%;
+    flex-direction: row;
+    /* align-content: center; */
+  }
+  .nav-toggle {
+    display: none;
+  }
+  .nav-name {
+    align-items: center;
+  }
+  .nav-links {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    height: 100%;
+    width: 50rem;
+    padding-top: 0.5rem;
+    /* background-color: red; */
+  }
+  #about-me {
+    border-bottom-style: solid;
+    border-bottom-width: 1.3px;
+    border-bottom-color: var(--clr-primary);
+  }
+  .link-container {
+    /* background-color: blue; */
+    height: 80%;
+    padding-top: 0.1rem;
+    transition: var(--transition-link);
+  }
+  .link-container:hover {
+    border-bottom-style: solid;
+    border-bottom-width: 1.3px;
+    border-bottom-color: var(--clr-primary);
+  }
+
+  /* Header Styling Tablet and Laptop */
+  .hero-container {
+    height: 70vh;
+  }
+
+  /* About Styling Tablet and Laptop */
+  .about-article {
+    margin-top: 1.3rem;
+  }
+  .about-header h3 {
+    font-size: 3rem;
+  }
+  .about-title {
+    font-size: 1.5rem;
+  }
+  .border {
+    width: 10%;
+  }
+
+  /* Footer Styling Tablet and Laptop */
+  footer {
+    height: 10vh;
+  }
+  .buffer {
+    width: 15%;
+  }
+  .final-sect {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 100%;
+  }
+  .final-sect a {
+    width: 15%;
+    /* background: blue; */
+  }
+  .icons {
+    width: 30%;
+    margin-top: 1rem;
+  }
+}
+
+@media screen and (min-width: 1507px) {
+  /* Navbar Styling Desktop */
+  nav {
+    height: 10%;
+    flex-direction: row;
+    padding: 0 8rem 0.5rem 8rem;
+    /* align-content: center; */
+  }
+  .nav-toggle {
+    display: none;
+  }
+  .nav-name {
+    align-items: center;
+  }
+  .nav-links {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    height: 100%;
+    width: 50rem;
+    padding-top: 0.5rem;
+    /* background-color: red; */
+  }
+  #about-me {
+    border-bottom-style: solid;
+    border-bottom-width: 1.3px;
+    border-bottom-color: var(--clr-primary);
+  }
+  .link-container {
+    /* background-color: blue; */
+    height: 80%;
+    padding-top: 0.3rem;
+    transition: var(--transition-link);
+  }
+  .link-container:hover {
+    border-bottom-style: solid;
+    border-bottom-width: 1.3px;
+    border-bottom-color: var(--clr-primary);
+  }
+
+  /* Header Styling Desktop */
+  .hero-container {
+    height: 80vh;
+  }
+  .header {
+    font-size: 6rem;
+  }
+  .buffer1 {
+    height: 5rem;
+  }
+
+  /* About Styling Desktop */
+  .about-article {
+    margin-top: 2rem;
+  }
+  .about-header h3 {
+    font-size: 3rem;
+  }
+  .about-title {
+    font-size: 2rem;
+  }
+  .border {
+    width: 8%;
+  }
+
+  /* Footer Styling Desktop */
+  footer {
+    height: 12vh;
+    margin-top: 5rem;
+  }
+  .buffer {
+    width: 10%;
+  }
+  .final-sect {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 100%;
+  }
+  .final-sect a {
+    width: 15%;
+    /* background: blue; */
+  }
+  .icons {
+    width: 30%;
+    margin-top: 1rem;
+  }
+}

@@ -1,0 +1,501 @@
+/* 
+ Variables
+*/
+:root {
+  --clr-primary: #1edb2e;
+  --clr-secondary: #105c17;
+  --clr-text-white: #e0e0e0;
+  --clr-text-black: #1b1b1b;
+  --clr-white: #ffffff;
+  --clr-black: #000000;
+  --clr-header1: #0e0e0e;
+  --clr-header2: #1d1d1d;
+  --clr-header3: #2b2b2b;
+  --clr-header4: #292929;
+  --clr-button: #42ff3b;
+  --clr-link-before: #07e61a;
+  --clr-link-after: #76fa72;
+  --transition-link: all 0.3s linear;
+  --card-transition: all 0.1s linear;
+  --clr-nav: #1f1f1f;
+  --clr-footer: #313131;
+}
+
+/* Nav-Bar Styling */
+nav {
+  display: flex;
+  flex-direction: column;
+  padding: 0 3rem 0.5rem 3rem;
+  background-color: var(--clr-nav);
+  position: fixed;
+  width: 100%;
+  box-shadow: 0 1.4px 5px #186b17;
+  /* Makes sure that the navbar displays over animations */
+  z-index: 1;
+}
+.nav-name {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100%;
+  margin-top: 0.3rem;
+}
+.nav-header {
+  font-size: 2.3rem;
+  color: var(--clr-text-white);
+}
+.nav-header span {
+  color: var(--clr-primary);
+}
+.nav-toggle {
+  height: 30%;
+  font-size: 2.3rem;
+  border-style: none;
+  background-color: transparent;
+  padding-top: 0.3rem;
+  color: var(--clr-text-white);
+}
+.nav-links {
+  list-style-type: none;
+}
+.nav-link {
+  text-transform: capitalize;
+  color: var(--clr-text-white);
+  font-size: 1.3rem;
+  transition: var(--transition-link);
+  line-height: 3rem;
+}
+.nav-link:hover {
+  color: var(--clr-primary);
+}
+.nav-links {
+  height: 0;
+  overflow: hidden;
+  transition: var(--transition-link);
+}
+.show-links {
+  height: 192px;
+}
+/* Hero Styling */
+.buffer1 {
+  height: 10%;
+}
+.buffer2 {
+  height: 10%;
+}
+.hero-section {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  text-align: center;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)),
+    url("./images/hero-mobile.jpeg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+}
+.hero-text {
+  padding-bottom: 1.5rem;
+}
+.fa-arrow-down {
+  font-size: 5rem;
+  padding-bottom: 1rem;
+  color: #c7c7c7;
+  animation: scroll-arrow 2s linear 7s infinite backwards;
+}
+.smallheader {
+  color: var(--clr-primary);
+  animation: fade1 3s ease 1;
+}
+.bigheader {
+  color: var(--clr-text-white);
+  animation: fade2 3s ease 3s 1 backwards;
+}
+
+/* Project Styling */
+.project-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 5rem;
+}
+.project-title {
+  width: 70%;
+  padding-top: 3rem;
+  padding-bottom: 0.5rem;
+  border-bottom-style: solid;
+  border-bottom-color: rgb(233, 233, 233);
+  border-bottom-width: 2px;
+}
+.project-title h3 {
+  text-transform: capitalize;
+}
+.project-title a {
+  color: var(--clr-link-before);
+  text-transform: uppercase;
+  transition: var(--transition-link);
+  font-weight: bold;
+}
+.project-card-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 1rem;
+  padding-bottom: 2rem;
+  /* background: red; */
+  /* width: 100%; */
+}
+.project-card {
+  width: 70%;
+}
+.card-buffer {
+  height: 3rem;
+}
+.card-text {
+  border-left-style: solid;
+  border-right-style: solid;
+  border-bottom-style: solid;
+  border-color: #dddddd;
+  border-width: 1.7px;
+  padding: 0 2rem 1rem 2rem;
+}
+.date {
+  margin-top: 0.5rem;
+  color: var(--clr-primary);
+}
+.project-title a:hover {
+  color: var(--clr-link-after);
+}
+
+/* About Styling */
+.about-header {
+  width: 70%;
+  margin: 0 auto;
+}
+.about-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.about-info {
+  width: 70%;
+  margin-top: 1rem;
+}
+.about-info ul {
+  margin-left: 1.5rem;
+  width: 80%;
+  margin-bottom: 1.5rem;
+}
+.about-text p {
+  margin-bottom: 1rem;
+}
+.about-header {
+  border-bottom-style: solid;
+  border-color: rgb(233, 233, 233);
+  border-width: 2px;
+}
+.button {
+  transition: var(--transition-link);
+  background-color: var(--clr-primary);
+  padding: 0.7rem 1rem;
+  color: var(--clr-white);
+  border-radius: 4px;
+}
+.button:hover {
+  background-color: var(--clr-button);
+}
+.about-image {
+  margin-top: 1.5rem;
+  padding: 0.4rem 0.4rem 0.4rem 0.4rem;
+  width: 70%;
+  background-color: var(--clr-secondary);
+  margin-bottom: 2rem;
+}
+
+/* Footer Styling */
+footer {
+  height: 20vh;
+  background-color: var(--clr-footer);
+  margin-top: 3rem;
+}
+.final-sect {
+  /* background: red; */
+  width: 50%;
+  height: 100%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.final-sect a {
+  width: 32%;
+  text-align: center;
+}
+.icons {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  /* background: blue; */
+  width: 60%;
+  margin-bottom: 1.5rem;
+}
+.social {
+  font-size: 2.5rem;
+  /* background: red; */
+  color: var(--clr-primary);
+  transition: var(--transition-link);
+}
+.social:hover {
+  color: var(--clr-button);
+}
+.footer-button {
+  min-width: 8rem;
+}
+
+/* Animation*/
+/* Hero */
+/* header4 fade */
+@keyframes fade1 {
+  0% {
+    transform: translateY(-50px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0px);
+    opacity: 1;
+  }
+}
+/* header1 fade */
+@keyframes fade2 {
+  0% {
+    transform: translateY(-50px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0px);
+    opacity: 1;
+  }
+}
+/* icon animation */
+@keyframes scroll-arrow {
+  0% {
+    transform: translateY(-50px);
+    opacity: 0;
+  }
+  50% {
+    transform: translateY(-25px);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(0px);
+    opacity: 0;
+  }
+}
+@media screen and (min-width: 913px) and (max-width: 1506px) {
+  /* Navbar Styling Tablet and Laptop */
+  nav {
+    height: 10%;
+    flex-direction: row;
+    /* align-content: center; */
+  }
+  .nav-name {
+    align-items: center;
+  }
+  .nav-toggle {
+    display: none;
+  }
+  .nav-links {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    height: 100%;
+    width: 50rem;
+    padding-top: 0.5rem;
+    /* background-color: red; */
+  }
+  #home {
+    border-bottom-style: solid;
+    border-bottom-width: 1.3px;
+    border-bottom-color: var(--clr-primary);
+  }
+  .link-container {
+    /* background-color: blue; */
+    height: 80%;
+    padding-top: 0.1rem;
+    transition: var(--transition-link);
+  }
+  .link-container:hover {
+    border-bottom-style: solid;
+    border-bottom-width: 1.3px;
+    border-bottom-color: var(--clr-primary);
+  }
+
+  /* Hero Styling Tablet and Laptop */
+  .hero-section {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)),
+      url("./images/hero-desktop.jpeg");
+  }
+  /* Project Styling Tablet and Laptop */
+  .project-card {
+    width: 50%;
+    transition: var(--card-transition);
+  }
+  .project-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 5px 5px #cecece;
+  }
+  /* About Styling Tablet and Laptop */
+  .about-section {
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: space-between;
+    width: 70%;
+    margin: 0 auto 1rem auto;
+  }
+  .about-image {
+    width: 30%;
+  }
+  .about-info {
+    width: 50%;
+    margin-top: 1rem;
+  }
+
+  /* Footer Styling Tablet and Laptop */
+  footer {
+    height: 10vh;
+  }
+  .buffer {
+    width: 15%;
+  }
+  .final-sect {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 100%;
+  }
+  .final-sect a {
+    width: 15%;
+    /* background: blue; */
+  }
+  .icons {
+    width: 30%;
+    margin-top: 1rem;
+  }
+}
+@media screen and (min-width: 1507px) {
+  /* Navbar Styling Desktop */
+  nav {
+    height: 10%;
+    flex-direction: row;
+    padding: 0 8rem 0.5rem 8rem;
+    /* align-content: center; */
+  }
+  .nav-name {
+    align-items: center;
+  }
+  .nav-toggle {
+    display: none;
+  }
+  .nav-links {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    height: 100%;
+    width: 50rem;
+    padding-top: 0.5rem;
+    /* background-color: red; */
+  }
+  #home {
+    border-bottom-style: solid;
+    border-bottom-width: 1.3px;
+    border-bottom-color: var(--clr-primary);
+  }
+  .link-container {
+    /* background-color: blue; */
+    height: 80%;
+    padding-top: 0.3rem;
+    transition: var(--transition-link);
+  }
+  .link-container:hover {
+    border-bottom-style: solid;
+    border-bottom-width: 1.3px;
+    border-bottom-color: var(--clr-primary);
+  }
+  /* Hero Styling Desktop */
+  .hero-section {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)),
+      url("./images/hero-desktop.jpeg");
+  }
+  /* Project Styling Desktop */
+  .project-card-container {
+    flex-direction: row;
+    justify-content: space-between;
+    width: 70%;
+  }
+  .project-title {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  .project-title a {
+    margin-top: 4rem;
+  }
+  .project-card {
+    width: 30%;
+  }
+  .project-card h4 {
+    font-size: 1.5rem;
+  }
+  .card-text {
+    padding: 0.1rem 0.5rem 0.1rem 0.5rem;
+  }
+  .project-card {
+    transition: var(--card-transition);
+  }
+  .project-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 5px 5px 3px #bdbdbd;
+  }
+
+  /* About Styling Desktop */
+  .about-section {
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: space-between;
+    width: 70%;
+    margin: 0 auto 1rem auto;
+  }
+  .about-image {
+    width: 30%;
+  }
+  .about-info {
+    width: 50%;
+    margin-top: 1rem;
+  }
+
+  /* Footer Styling Desktop */
+  footer {
+    height: 12vh;
+  }
+  .buffer {
+    width: 10%;
+  }
+  .final-sect {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 100%;
+  }
+  .final-sect a {
+    width: 15%;
+    /* background: blue; */
+  }
+  .icons {
+    width: 30%;
+    margin-top: 1rem;
+  }
+}
