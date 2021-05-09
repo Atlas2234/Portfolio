@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <meta charset="UTF-8">
+ <meta http-equiv="X-UA-Compatible" content="IE=edge">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <title>My Website || Projects</title>
+ <!-- linking to css with global styles and variabls -->
+ <link rel="stylesheet" href="./css/root.css">
+ <!-- linking to css for the home -->
+ <link rel="stylesheet" href="./css/project.css">
+ <!-- linking to favicon -->
+ <link rel="shortcut icon" href="./css/images/favicon.ico" type="image/x-icon">
+ <!-- linking icons -->
+ <link rel="stylesheet" href="./css/fontawesome-free-5.15.3-web/fontawesome-free-5.15.3-web/css/all.css">
+</head>
+<body>
+ <!-- Nav-bar -->
+ <nav>
+  <div class="nav-name">
+   <h4 class="nav-header">David <span>Zhang</span></h4>
+   <button type="button" class="nav-toggle" id="nav-toggle"><i class="fas fa-bars"></i></button>
+  </div>
+  <ul class="nav-links" id="nav-links">
+   <div class="link-container" id="home">
+    <li><a href="./index.html" class="nav-link">home</a></li>
+   </div>
+   <div class="link-container" id="projects">
+    <li><a href="./proj.html" class="nav-link">projects</a></li>
+   </div>
+   <div class="link-container" id="about-me">
+    <li><a href="./about-me.html" class="nav-link">about me</a></li>
+   </div>
+   <div class="link-container" id="contact-me">
+    <li><a href="./contact-me.html" class="nav-link">contact me</a></li>
+   </div>
+  </ul>
+ </nav>
+
+ <!-- Hero -->
+ <header class="header">
+  <h1 class="project-header">Projects</h1>
+  <div class="buffer1"></div>
+ </header>
+
+ <!-- Project -->
+ <section class="project-container" id="proj">
+  <div class="section-title">
+   <h3>notable projects</h3>
+  </div>
+  <div class="container">
+   <article class="card">
+    <div class="title">
+     <h4>Unity Horror Game</h4>
+     <p class="date">May 6, 2021</p>
+    </div>
+    <div class="info">
+     <p>A short horror game that I made by myself with the Unity 3D Engine. The name of the game is called "The Halls". The scripts are written in C# and the map was made with probuilder, a Unity asset. All models, sounds, and textures used in the game are free assets taken from the Unity asset store and freesounds.org. The actual gameplay mechanics and scripts are made from scratch by me. You can watch a video of it <a href="">here</a> or download and play it <a href="">here</a>.</p>
+    </div>
+   </article>
+   <article class="card">
+    <div class="title">
+     <h4>CSCb63 Website</h4>
+     <p class="date">April 21, 2021</p>
+    </div>
+    <div class="info">
+     <p>A redesign and remake of a course website from my university using Flask, HTML, CSS, and Javascript. It was an assignment my "Introduction to Databases and Web Development" course at University of Toronto, and it was coded by me and a partner. Everything in the assignment was done by us. We made the mockup using mockingbird and adobe XD, designed the frontend with HTML, CSS and Javascript, and programmed the backend with Flask. You can find the project on my GitHub <a href="https://github.com/Atlas2234/cscb63site" target="_blank">here</a>. The original github repository was made by my partner and was privated so I made a separate one.</p>
+    </div>
+   </article>
+   <article class="card">
+    <div class="title">
+     <h4>Space Shooter</h4>
+     <p class="date">April 12, 2021</p>
+    </div>
+    <div class="info">
+     <p>A "shoot-em up" arcade game that I made using only MIPS Assembly. Project consists of utilizing MIPS key listener and framebuffer. This was the final project for my "Computer Hardware and Organisation" course at University of Toronto. Everything was made from scratch with MIPS Assembly by me. You can view the code <a href="https://github.com/Atlas2234/Space-Game" target="_blank">here</a> and/or watch my video demonstration of the application <a href="https://www.youtube.com/watch?v=1O_svbwvrLM" target="_blank">here</a>.</p>
+    </div>
+   </article>
+   <article class="card">
+   <div class="title">
+    <h4>First Site</h4>
+    <p class="date">August 16, 2020</p>
+   </div>
+   <div class="info">
+    <p>This is the very first website I have ever made from scratch. It was made using HTML, CSS, and a little of Javascript. I was following a tutorial for this site but tweaking all the things that they were teaching, as well as, changing up the template from the original one used in the tutorial. You can view the code <a href="https://github.com/Atlas2234/First-Project" target="_blank">here</a> and the website <a href="https://first-project-11.netlify.app" target="_blank">here</a>.</p>
+   </div>
+   </article>
+  </div>
+ </section>
+ 
+ <!-- Addendum -->
+ <div class="ps">
+  <h4>You can find all of my projects, including those that are not displayed here, on my <a href="https://github.com/Atlas2234" target="_blank">GitHub</a></h4>
+ </div>
+
+ <!-- Footer -->
+ <footer>
+  <div class="final-sect">
+   <div class="buffer"></div>
+   <div class="icons">
+    <a href="https://github.com/Atlas2234" class="social" target="_blank"><i class="fab fa-github"></i></a>
+    <a href="https://atlas8.itch.io/" class="social" target="_blank"><i class="fab fa-itch-io"></i></a>
+    <a href="https://www.youtube.com/channel/UCy3AEFywtbznEZn9aQHBBGA" class="social" target="_blank"><i
+      class="fab fa-youtube"></i></a>
+   </div>
+   <a href="#proj" class="button footer-button scroll">To the top</a>
+  </div>
+ </footer>
+ <script src="javscript/app.js"></script>
+</body>
+</html>
