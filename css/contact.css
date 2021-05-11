@@ -211,6 +211,9 @@ footer {
   .contact-header h3 {
     font-size: 2rem;
   }
+  .content {
+    margin-bottom: 1rem;
+  }
 
   /* Footer Styling Tablet and Laptop */
   footer {
@@ -290,6 +293,9 @@ footer {
   /* Contact Styling Desktop */
   .contact-header h3 {
     font-size: 4rem;
+  }
+  .content {
+    margin-bottom: 2.5rem;
   }
 
   /* Footer Styling Desktop */
