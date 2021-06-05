@@ -341,6 +341,7 @@ footer {
   /* Project Styling Tablet and Laptop */
   .project-card {
     width: 50%;
+    max-width: 60rem;
     transition: var(--card-transition);
   }
   .project-card:hover {
@@ -446,6 +447,7 @@ footer {
   }
   .project-card {
     width: 30%;
+    min-width: 21rem;
   }
   .project-card h4 {
     font-size: 1.5rem;
