@@ -41,7 +41,7 @@ nav {
   margin-top: 0.3rem;
 }
 .nav-header {
-  font-size: 2.3rem;
+  font-size: 2rem;
   color: var(--clr-text-white);
 }
 .nav-header span {
@@ -54,6 +54,7 @@ nav {
   background-color: transparent;
   padding-top: 0.3rem;
   color: var(--clr-text-white);
+  margin-top: 0.5rem;
 }
 .nav-links {
   list-style-type: none;
@@ -127,6 +128,7 @@ nav {
   border-bottom-style: solid;
   border-bottom-color: rgb(233, 233, 233);
   border-bottom-width: 2px;
+  text-align: center;
 }
 .project-title h3 {
   text-transform: capitalize;
@@ -136,6 +138,7 @@ nav {
   text-transform: uppercase;
   transition: var(--transition-link);
   font-weight: bold;
+  text-align: center;
 }
 .project-card-container {
   display: flex;
@@ -148,6 +151,7 @@ nav {
 }
 .project-card {
   width: 70%;
+  min-width: 23rem;
 }
 .card-buffer {
   height: 3rem;
@@ -159,6 +163,7 @@ nav {
   border-color: #dddddd;
   border-width: 1.7px;
   padding: 0 2rem 1rem 2rem;
+  text-align: center;
 }
 .date {
   margin-top: 0.5rem;
@@ -172,6 +177,7 @@ nav {
 .about-header {
   width: 70%;
   margin: 0 auto;
+  text-align: center;
 }
 .about-section {
   display: flex;
@@ -187,13 +193,24 @@ nav {
   width: 80%;
   margin-bottom: 1.5rem;
 }
+.about-text {
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+}
 .about-text p {
   margin-bottom: 1rem;
+  text-align: center;
 }
 .about-header {
   border-bottom-style: solid;
   border-color: rgb(233, 233, 233);
   border-width: 2px;
+}
+#about-button {
+  text-align: center;
+  width: 10rem;
+  align-self: center;
 }
 .button {
   transition: var(--transition-link);
@@ -216,6 +233,7 @@ nav {
 /* Footer Styling */
 footer {
   height: 20vh;
+  min-height: 10rem;
   background-color: var(--clr-footer);
   margin-top: 3rem;
 }
@@ -239,6 +257,7 @@ footer {
   justify-content: space-evenly;
   /* background: blue; */
   width: 60%;
+  min-width: 10rem;
   margin-bottom: 1.5rem;
 }
 .social {
@@ -348,6 +367,9 @@ footer {
     transform: translateY(-2px);
     box-shadow: 5px 5px #cecece;
   }
+  .card-text {
+    text-align: left;
+  }
   /* About Styling Tablet and Laptop */
   .about-section {
     flex-direction: row;
@@ -362,6 +384,15 @@ footer {
   .about-info {
     width: 50%;
     margin-top: 1rem;
+  }
+  .about-header {
+    text-align: left;
+  }
+  .about-text {
+    display: block;
+  }
+  .about-text p {
+    text-align: left;
   }
 
   /* Footer Styling Tablet and Laptop */
@@ -454,6 +485,7 @@ footer {
   }
   .card-text {
     padding: 0.1rem 0.5rem 0.1rem 0.5rem;
+    text-align: left;
   }
   .project-card {
     transition: var(--card-transition);
@@ -477,6 +509,15 @@ footer {
   .about-info {
     width: 50%;
     margin-top: 1rem;
+  }
+  .about-header {
+    text-align: left;
+  }
+  .about-text {
+    display: block;
+  }
+  .about-text p {
+    text-align: left;
   }
 
   /* Footer Styling Desktop */
